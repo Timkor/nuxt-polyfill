@@ -17,7 +17,7 @@ npm install nuxt-polyfill
 
 Add the module to your `nuxt.config.js`: 
 
-```
+```javascript
 export default {
  modules: [
   [
