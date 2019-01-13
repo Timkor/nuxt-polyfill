@@ -25,6 +25,7 @@ export default {
         features: [
             // Add features:
             {
+                type: 'service',
                 detect: () => IntersectionObserver in window, // Will be called client side on load
                 feature: 'IntersectionObserver' 
             }
