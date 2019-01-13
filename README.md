@@ -30,13 +30,13 @@ export default {
                 
                 type: 'service',
                 
-                // Will be called client side on load
+                // Will be called client side on load (optional but recommended):
                 detect: () => IntersectionObserver in window,
             },
             
             {
-                // NPM package:
-                feature: 'IntersectionObserver'
+                // Custom feature:
+                feature: 'IntersectionObserver' // NPM package
                 
                 type: 'custom',
                 
