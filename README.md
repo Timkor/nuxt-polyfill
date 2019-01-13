@@ -23,12 +23,11 @@ export default {
     // Configure polyfills:
     polyfill: {
         features: [
+        
             // Add features:
             {
                 // Feature name of polyfill.io:
-                feature: 'IntersectionObserver' 
-                
-                type: 'service',
+                name: 'IntersectionObserver' 
                 
                 // Will be called client side on load (optional but recommended):
                 detect: () => IntersectionObserver in window,
@@ -36,9 +35,7 @@ export default {
             
             {
                 // Custom feature:
-                feature: 'intersection-observer' // NPM package
-                
-                type: 'custom',
+                package: 'intersection-observer' // NPM package
                 
                 detect: () => IntersectionObserver in window,
                 
@@ -61,3 +58,11 @@ export default {
 ### Custom features
 
 ### Full Nuxt.js example projects
+
+## Documentation
+### feature.name
+### feature.package
+### feature.detect
+### feature.install
+### feature.includeInBuild
+
