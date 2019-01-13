@@ -9,3 +9,10 @@ Ease adding polyfills to your Nuxt.js project using [polyfill.io](polyfill.io) a
  - Aims to be as fast as possible
  - Supports polyfills from [polyfill.io](polyfill.io)
  - Supports custom polyfills
+
+## 1. Get it
+```
+npm install nuxt-polyfill
+```
+
+## 2. Add it
