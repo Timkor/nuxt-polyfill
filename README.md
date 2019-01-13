@@ -6,7 +6,7 @@ Ease adding polyfills to your Nuxt.js project using [polyfill.io](polyfill.io) a
 ## Features
  - Easy to configure
  - Load polyfills **only if needed**
- - Aims to be as fast as possible
+ - ⚡️ Aims to be as fast as possible
  - Supports polyfills from [polyfill.io](polyfill.io)
    - Multiple features are bundled
    - Detect function can be called before loading the features
