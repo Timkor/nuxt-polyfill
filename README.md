@@ -10,9 +10,22 @@ Ease adding polyfills to your Nuxt.js project using [polyfill.io](polyfill.io) a
  - Supports polyfills from [polyfill.io](polyfill.io)
  - Supports custom polyfills
 
-## 1. Get it
+## Getting started
 ```
 npm install nuxt-polyfill
 ```
 
-## 2. Add it
+Add the module to your `nuxt.config.js`: 
+
+```
+export default {
+ modules: [
+  [
+   'nuxt-polyfill',
+   {
+    // Options
+   }
+  ]
+ ]
+}
+```
