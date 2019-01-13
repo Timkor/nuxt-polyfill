@@ -19,14 +19,22 @@ Add the module to your `nuxt.config.js`:
 
 ```javascript
 export default {
- modules: [
-  [
-   'nuxt-polyfill',
-   {
-    // Options
-   }
-  ]
- ]
+    
+    // Configure polyfills:
+    polyfill: {
+        features: [
+            // Add features:
+            {
+                detect: 'IntersectionObserver in window',
+                feature: 'IntersectionObserver'
+            }
+        ]
+    }
+    
+    // Add it to the modules section:
+    modules: [
+        'nuxt-polyfill',
+    ]
 }
 ```
 
