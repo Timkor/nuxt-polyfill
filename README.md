@@ -1,7 +1,7 @@
 # nuxt-polyfill
 Ease adding polyfills to your Nuxt.js project using [polyfill.io](polyfill.io) among others.
 
-##Features
+## Features
  - Easy to configure
  - Load polyfills **only if needed**
  - Aims to be as fast as possible
