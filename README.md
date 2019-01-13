@@ -36,7 +36,7 @@ export default {
             
             {
                 // Custom feature:
-                feature: 'IntersectionObserver' // NPM package
+                feature: 'intersection-observer' // NPM package
                 
                 type: 'custom',
                 
