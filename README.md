@@ -29,3 +29,10 @@ export default {
  ]
 }
 ```
+
+## Examples
+### Simple features
+
+### Custom features
+
+### Full Nuxt.js example projects
