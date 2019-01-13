@@ -25,8 +25,8 @@ export default {
         features: [
             // Add features:
             {
-                detect: () => IntersectionObserver in window,
-                feature: 'IntersectionObserver'
+                detect: () => IntersectionObserver in window, // Will be called client side on load
+                feature: 'IntersectionObserver' 
             }
         ]
     }
