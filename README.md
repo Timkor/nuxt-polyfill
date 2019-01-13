@@ -25,9 +25,25 @@ export default {
         features: [
             // Add features:
             {
-                type: 'service',
-                detect: () => IntersectionObserver in window, // Will be called client side on load
+                // Feature name of polyfill.io:
                 feature: 'IntersectionObserver' 
+                
+                type: 'service',
+                
+                // Will be called client side on load
+                detect: () => IntersectionObserver in window,
+            },
+            
+            {
+                // NPM package:
+                feature: 'IntersectionObserver'
+                
+                type: 'custom',
+                
+                detect: () => IntersectionObserver in window,
+                
+                // Optional install function called client side after the package is required:
+                install: () => { ... }
             }
         ]
     }
