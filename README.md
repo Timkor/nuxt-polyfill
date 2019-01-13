@@ -25,7 +25,7 @@ export default {
         features: [
             // Add features:
             {
-                detect: 'IntersectionObserver in window',
+                detect: () => IntersectionObserver in window,
                 feature: 'IntersectionObserver'
             }
         ]
