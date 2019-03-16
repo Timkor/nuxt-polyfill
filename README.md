@@ -14,6 +14,7 @@ Ease adding polyfills to your Nuxt.js project using [polyfill.io](polyfill.io) a
    - Multiple features are bundled
    - Detect function can be called before loading the features
  - Support for server side polyfills
+ - Support for require array (necessary for Intl polyfill)
 
 ## Getting started
 ```
