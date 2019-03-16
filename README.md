@@ -74,7 +74,7 @@ export default {
 }
 ```
 
-## Polyfills (including detection functions):
+## Useful polyfill links (including detection functions):
  - [https://github.com/Financial-Times/polyfill-library](https://github.com/Financial-Times/polyfill-library)
 
 ## Documentation
