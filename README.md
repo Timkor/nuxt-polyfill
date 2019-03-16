@@ -32,7 +32,7 @@ export default {
             // Add features:
             {
                 // Feature name of polyfill.io:
-                name: 'IntersectionObserver' 
+                require: 'IntersectionObserver' 
                 
                 // Will be called client side on load (optional but recommended):
                 detect: () => IntersectionObserver in window,
@@ -40,7 +40,7 @@ export default {
             
             {
                 // Custom feature:
-                package: 'intersection-observer' // NPM package
+                require: 'intersection-observer' // NPM package
                 
                 detect: () => IntersectionObserver in window,
                 
@@ -66,8 +66,9 @@ export default {
 
 ## Documentation
 ### feature.name
-### feature.package
+### feature.require
 ### feature.detect
 ### feature.install
 ### feature.includeInBuild
+### feature.mode
 
