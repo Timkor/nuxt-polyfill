@@ -80,7 +80,7 @@ export default {
 
 ## Documentation
 ### feature.name
-Type `String`. Not requires.
+Type `String`. Not required.
 
 ### feature.require
 Type `String`. NPM package or require path of JS file.
