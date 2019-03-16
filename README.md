@@ -48,7 +48,7 @@ export default {
             */
             {
                 require: 'intersection-observer',
-                detect: () => IntersectionObserver in window,
+                detect: () => 'IntersectionObserver' in window,
             },
 
             /*
