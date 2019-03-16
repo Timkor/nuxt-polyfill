@@ -1,13 +1,15 @@
-❗️ **Warning:** This package is under development, will be published shortly
+
 
 # nuxt-polyfill
-Ease adding polyfills to your Nuxt.js project using [polyfill.io](polyfill.io) among others.
+Ease adding polyfills to your Nuxt.js project.
+
+❗️ **Requires** Nuxt 2
 
 ## Features
  - ✔ Easy to configure
  - ❔ Lazy load polyfills **only if needed**
  - ⚡️ Aims to be as fast as possible
- - 🔧 Supports custom polyfills
+ - 🔧 Supports any polyfill as NPM package or JS file
  
 ## Roadmap
  - ⭐️ Supports polyfills from [polyfill.io](polyfill.io)
@@ -76,18 +78,18 @@ export default {
 }
 ```
 
-## Examples
-### Simple features
-
-### Custom features
-
-### Full Nuxt.js example projects
-
 ## Documentation
 ### feature.name
-### feature.require
-### feature.detect
-### feature.install
-### feature.includeInBuild
-### feature.mode
+Type `String`. Not required.
 
+### feature.require
+Type `String`. NPM package or require path of JS file.
+
+### feature.detect
+Type `Function`. Detection function, should return a `Boolean`.
+
+### feature.install
+Type `Function`. Installation function. First argument is the default export in the required file/package.
+
+### feature.mode
+Not supported yet. Only client polyfills are supported.
