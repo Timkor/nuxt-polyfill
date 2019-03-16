@@ -28,48 +28,45 @@ export default {
     
     // Configure polyfills:
     polyfill: {
-       features: [
-          {
+        features: [
             /* 
-              Feature without detect:
+                Feature without detect:
 
-              Note: 
-                This is not recommended for most polyfills
-                because the polyfill will always be loaded, parsed and executed.
+                Note: 
+                  This is not recommended for most polyfills
+                  because the polyfill will always be loaded, parsed and executed.
             */
-            require: 'url-polyfill'
+            {
+                require: 'url-polyfill' // NPM package or require path of file
+            },
 
-
-          },
-          {
             /* 
-              Feature with detect:
+                Feature with detect:
 
-              Detection is better because the polyfill will not be 
-              loaded, parsed and executed if it's not necessary.
+                Detection is better because the polyfill will not be 
+                loaded, parsed and executed if it's not necessary.
             */
-            require: 'intersection-observer', // NPM package
+            {
+                require: 'intersection-observer',
+                detect: () => IntersectionObserver in window,
+            },
 
-            detect: () => IntersectionObserver in window,
-          },
-
-          {
             /*
-              Feature with detect & install:
+                Feature with detect & install:
 
-              Some polyfills require a installation step
-              Hence you could supply a install function which accepts the require result
+                Some polyfills require a installation step
+                Hence you could supply a install function which accepts the require result
             */
-            require: 'smoothscroll-polyfill',
+            {
+                require: 'smoothscroll-polyfill',
 
-            // Optional install function called client side after the package is required:
-            // Detection found in source: https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
-            detect: () => 'scrollBehavior' in document.documentElement.style && window.__forceSmoothScrollPolyfill__ !== true,
+                // Detection found in source: https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
+                detect: () => 'scrollBehavior' in document.documentElement.style && window.__forceSmoothScrollPolyfill__ !== true,
 
-            // Install the polyfill:
-            install: (smoothscroll) => smoothscroll.polyfill()
-          }
-       ]
+                // Optional install function called client side after the package is required:
+                install: (smoothscroll) => smoothscroll.polyfill()
+            }
+        ]
     },
     
     // Add it to the modules section:
