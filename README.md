@@ -7,7 +7,7 @@ Ease adding polyfills to your Nuxt.js project.
 
 ## Features
  - ✔ Easy to configure
- - ❔ Lazy load polyfills **only if needed**
+ - ❔ Lazy load polyfills **only if needed** by using `Feature Detection`
  - ⚡️ Aims to be as fast as possible
  - 🔧 Supports any polyfill as NPM package or JS file
  
