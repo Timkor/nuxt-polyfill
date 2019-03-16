@@ -13,10 +13,6 @@ Ease adding polyfills to your Nuxt.js project.
  - ⭐️ Supports polyfills from [polyfill.io](https://polyfill.io)
  - Detect function can be called before loading the features
  - Polyfills are not included in the bundle but loaded separately
-   
-## Roadmap
- - Support for server side polyfills
- - Support for require array (necessary for Intl polyfill)
 
 ## Getting started
 ```
@@ -96,3 +92,7 @@ Type `Function`. Installation function. First argument is the default export in 
 
 ### feature.mode
 Not supported yet. Only client polyfills are supported.
+
+## Roadmap
+ - Support for server side polyfills
+ - Support for require array (necessary for Intl polyfill)
