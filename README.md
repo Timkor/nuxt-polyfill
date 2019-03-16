@@ -5,12 +5,16 @@ Ease adding polyfills to your Nuxt.js project using [polyfill.io](polyfill.io) a
 
 ## Features
  - ✔ Easy to configure
- - ❔ Load polyfills **only if needed**
+ - ❔ Lazy load polyfills **only if needed**
  - ⚡️ Aims to be as fast as possible
+ - 🔧 Supports custom polyfills
+ 
+## Roadmap
  - ⭐️ Supports polyfills from [polyfill.io](polyfill.io)
    - Multiple features are bundled
    - Detect function can be called before loading the features
- - 🔧 Supports custom polyfills
+ - Support for server side polyfills
+ - Support for require array (necessary for Intl polyfill)
 
 ## Getting started
 ```
@@ -25,27 +29,45 @@ export default {
     // Configure polyfills:
     polyfill: {
         features: [
-        
-            // Add features:
+            /* 
+                Feature without detect:
+
+                Note: 
+                  This is not recommended for most polyfills
+                  because the polyfill will always be loaded, parsed and executed.
+            */
             {
-                // Feature name of polyfill.io:
-                name: 'IntersectionObserver' 
-                
-                // Will be called client side on load (optional but recommended):
-                detect: () => IntersectionObserver in window,
+                require: 'url-polyfill' // NPM package or require path of file
             },
-            
+
+            /* 
+                Feature with detect:
+
+                Detection is better because the polyfill will not be 
+                loaded, parsed and executed if it's not necessary.
+            */
             {
-                // Custom feature:
-                package: 'intersection-observer' // NPM package
-                
-                detect: () => IntersectionObserver in window,
-                
+                require: 'intersection-observer',
+                detect: () => 'IntersectionObserver' in window,
+            },
+
+            /*
+                Feature with detect & install:
+
+                Some polyfills require a installation step
+                Hence you could supply a install function which accepts the require result
+            */
+            {
+                require: 'smoothscroll-polyfill',
+
+                // Detection found in source: https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
+                detect: () => 'scrollBehavior' in document.documentElement.style && window.__forceSmoothScrollPolyfill__ !== true,
+
                 // Optional install function called client side after the package is required:
-                install: () => { ... }
+                install: (smoothscroll) => smoothscroll.polyfill()
             }
         ]
-    }
+    },
     
     // Add it to the modules section:
     modules: [
@@ -63,8 +85,9 @@ export default {
 
 ## Documentation
 ### feature.name
-### feature.package
+### feature.require
 ### feature.detect
 ### feature.install
 ### feature.includeInBuild
+### feature.mode
 
