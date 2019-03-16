@@ -84,7 +84,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    path.resolve('../../src/index.js')
+    'nuxt-polyfill'
   ],
 
   /*

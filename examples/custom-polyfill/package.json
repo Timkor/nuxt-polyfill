@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "My perfect Nuxt.js project",
   "author": "Timkor",
-  "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -14,6 +13,7 @@
     "cross-env": "^5.2.0",
     "intersection-observer": "^0.5.1",
     "nuxt": "^2.4.0",
+    "nuxt-polyfill": "^1.0.0",
     "smoothscroll-polyfill": "^0.4.3",
     "url-polyfill": "^1.1.5"
   },

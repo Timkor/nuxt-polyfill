@@ -1,6 +1,6 @@
 {
   "name": "nuxt-polyfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ease adding polyfills to Nuxt.js projects using Polyfill.io among others",
   "main": "src/index.js",
   "directories": {
