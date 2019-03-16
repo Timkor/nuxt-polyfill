@@ -11,7 +11,8 @@ Ease adding polyfills to your Nuxt.js project.
  - ⚡️ Aims to be as fast as possible
  - 🔧 Supports any polyfill as NPM package or JS file
  - ⭐️ Supports polyfills from [polyfill.io](https://polyfill.io)
-   - Detect function can be called before loading the features
+ - Detect function can be called before loading the features
+ - Polyfills are not included in the bundle but loaded separately
    
 ## Roadmap
  - Support for server side polyfills
