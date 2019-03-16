@@ -10,11 +10,10 @@ Ease adding polyfills to your Nuxt.js project.
  - ❔ Lazy load polyfills **only if needed** by using `Feature Detection`
  - ⚡️ Aims to be as fast as possible
  - 🔧 Supports any polyfill as NPM package or JS file
- 
-## Roadmap
- - ⭐️ Supports polyfills from [polyfill.io](polyfill.io)
-   - Multiple features are bundled
+ - ⭐️ Supports polyfills from [polyfill.io](https://polyfill.io)
    - Detect function can be called before loading the features
+   
+## Roadmap
  - Support for server side polyfills
  - Support for require array (necessary for Intl polyfill)
 
@@ -77,6 +76,9 @@ export default {
     ]
 }
 ```
+
+## Polyfills (including detection functions):
+ - [https://github.com/Financial-Times/polyfill-library](https://github.com/Financial-Times/polyfill-library)
 
 ## Documentation
 ### feature.name
