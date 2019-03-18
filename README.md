@@ -74,6 +74,8 @@ export default {
 }
 ```
 
+**Note:** You need to install the NPM packages manually.
+
 ## Useful polyfill links (including detection functions):
  - [https://github.com/Financial-Times/polyfill-library](https://github.com/Financial-Times/polyfill-library)
 
