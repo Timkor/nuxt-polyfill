@@ -76,6 +76,12 @@ export default {
 
 **Note:** You need to install the NPM packages manually.
 
+In order to run this example:
+```
+npm i url-polyfill intersection-observer smoothscroll-polyfill
+```
+
+
 ## Useful polyfill links (including detection functions):
  - [https://github.com/Financial-Times/polyfill-library](https://github.com/Financial-Times/polyfill-library)
 
