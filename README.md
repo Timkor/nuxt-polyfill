@@ -1,9 +1,10 @@
 
 
 # nuxt-polyfill
+![npm](https://img.shields.io/npm/dt/nuxt-polyfill.svg)
 Ease adding polyfills to your Nuxt.js project.
 
-❗️ **Requires** Nuxt 2
+**Requires** Nuxt >= 2
 
 ## Features
  - ✔ Easy to configure
