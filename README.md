@@ -1,7 +1,6 @@
 
 
 # nuxt-polyfill
-![GitHub](https://img.shields.io/github/license/timkor/nuxt-polyfill.svg)
 ![npm](https://img.shields.io/npm/dt/nuxt-polyfill.svg)
 
 Ease adding polyfills to your Nuxt.js project.
