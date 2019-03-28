@@ -1,9 +1,11 @@
 
 
 # nuxt-polyfill
+![npm](https://img.shields.io/npm/dt/nuxt-polyfill.svg)
+
 Ease adding polyfills to your Nuxt.js project.
 
-❗️ **Requires** Nuxt 2
+**Requires** Nuxt >= 2
 
 ## Features
  - ✔ Easy to configure
@@ -73,6 +75,14 @@ export default {
     ]
 }
 ```
+
+**Note:** You need to install the NPM packages manually.
+
+In order to run this example:
+```
+npm i url-polyfill intersection-observer smoothscroll-polyfill
+```
+
 
 ## Useful polyfill links (including detection functions):
  - [https://github.com/Financial-Times/polyfill-library](https://github.com/Financial-Times/polyfill-library)
