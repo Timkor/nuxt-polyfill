@@ -2,11 +2,20 @@
 
 export default () => {
 
+    if (process.server) {
+        return;
+    }
+    
     <% if (typeof options.detect === 'string') { %>
             
     const detect = <%= options.detect  %>;
+    
+    <% if (options.log) { %>
+    console.log('Detect '  + <%= JSON.stringify(options.name) %>, detect());
+    <% } %>
 
     if (detect()) {
+        
         return;
     }
 
@@ -20,6 +29,9 @@ export default () => {
 
             const polyfill = require(<%= JSON.stringify(options.require) %>);
             
+            <% if (options.log) { %>
+            console.log('Load ' + <%= JSON.stringify(options.name) %>);
+            <% } %>
             
             <% if (typeof options.install === 'string') { %>
             

@@ -5,6 +5,7 @@ import pkg from './package'
 export default {
 
   polyfill: {
+    log: true,
     features: [
       /* 
           Feature without detect:
@@ -78,13 +79,14 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/test'
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-polyfill'
+    '~/../../src/index'
   ],
 
   /*

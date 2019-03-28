@@ -1,7 +1,8 @@
 import path from 'path';
 
 const defaultOptions = {
-    features: []
+    features: [],
+    log: false
 };
 
 export default function (moduleOptions) {
@@ -18,6 +19,7 @@ export default function (moduleOptions) {
         
         const params = {
             require: feature.require,
+            log: options.log,
             name: feature.name || (Array.isArray(require) ? require.join(',') : feature.require.toString())
         };
 
@@ -37,7 +39,7 @@ export default function (moduleOptions) {
 
         this.options.plugins.unshift({
             src: path.join(this.options.buildDir, `nuxt-polyfill/${params.name}.js`),
-            ssr: false
+            ssr: true
         });
     })
 
