@@ -100,6 +100,11 @@ Type `Function`. Detection function, should return a `Boolean`.
 ### feature.install
 Type `Function`. Installation function. First argument is the default export in the required file/package.
 
+### feature.include
+*Important:* If you care about SEO. You might want to set this option to `true`. 
+Type `Boolean`. Default: `false`
+Specify if the polyfill will be included into the default bundle. This will make sure the polyfill is downloaded together with the rest of your application. This might reduce page speed since Google uses Chrome 41 to index your website. 
+
 ### feature.mode
 Not supported yet. Only client polyfills are supported.
 
