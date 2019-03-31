@@ -20,6 +20,7 @@ export default function (moduleOptions) {
         const params = {
             require: feature.require,
             log: options.log,
+            include: typeof feature.detect === 'function' ? feature.include || false : true,
             name: feature.name || (Array.isArray(require) ? require.join(',') : feature.require.toString())
         };
 

@@ -15,6 +15,7 @@ export default {
             because the polyfill will always be loaded, parsed and executed.
       */
       {
+          
           require: 'url-polyfill' // NPM package or require path of file
       },
 
@@ -27,6 +28,7 @@ export default {
       {
           require: 'intersection-observer',
           detect: () => 'IntersectionObserver' in window,
+          include: true,
       },
 
       /*
@@ -42,7 +44,9 @@ export default {
           detect: () => 'scrollBehavior' in document.documentElement.style && window.__forceSmoothScrollPolyfill__ !== true,
 
           // Optional install function called client side after the package is required:
-          install: (smoothscroll) => smoothscroll.polyfill()
+          install: (smoothscroll) => smoothscroll.polyfill(),
+
+          include: true,
       }
   ]
   },

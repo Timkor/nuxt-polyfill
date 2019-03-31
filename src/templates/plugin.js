@@ -21,11 +21,14 @@ export default () => {
 
     <% } %>
 
+    <% if (!options.include) { %>
     return new Promise((resolve, reject) => {
 
         require.ensure([
             <%= JSON.stringify(options.require) %>
         ], function (require) {
+
+            <% } %>
 
             const polyfill = require(<%= JSON.stringify(options.require) %>);
             
@@ -41,7 +44,10 @@ export default () => {
 
             <% } %>
 
+    <% if (!options.include) { %>
+
             resolve();
         });
-    })
+    });
+    <% } %>
 }
