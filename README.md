@@ -102,9 +102,9 @@ Type `Function`. Installation function. First argument is the default export in 
 
 ### feature.include 
 Type `Boolean`. Default: `false`
-Specify if the polyfill will be included into the default bundle. This will make sure the polyfill is downloaded together with the rest of your application. This might reduce page speed since Google uses Chrome 41 to index your website. 
+Specify if the polyfill will be included into the default bundle. This will make sure the polyfill is downloaded together with the rest of your application. This might reduce page speed.
 
-**Important:** If you care about **SEO**. You might want to set this option to `true`.
+**Note:** If you care about **SEO**. You might want to set this option to `true`. Google uses Chrome 41 to index your website although it is not clear whether Google uses these page speed metrics. It is also said that Google uses metrics from Chrome users.
 
 ### feature.mode
 Not supported yet. Only client polyfills are supported.
