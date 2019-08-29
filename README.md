@@ -105,6 +105,7 @@ Type `Boolean`. Default: `false`
 Specify if the polyfill will be included into the default bundle. This will make sure the polyfill is downloaded together with the rest of your application. This might reduce page speed.
 
 **Note:** If you care about **SEO**. You might want to set this option to `true`. Google uses Chrome 41 to index your website although it is not clear whether Google uses these page speed metrics. It is also said that Google uses metrics from Chrome users.
+This also depends on the size and the probability of the availability of native support. If a polyfill's bundle size is really and/or a polyfill is more likely required (because current support is bad), you should set this flag to true.  
 
 ### feature.mode
 Not supported yet. Only client polyfills are supported.
