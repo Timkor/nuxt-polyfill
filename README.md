@@ -1,4 +1,3 @@
-aaa
 
 # nuxt-polyfill
 ![npm](https://img.shields.io/npm/dt/nuxt-polyfill.svg)
